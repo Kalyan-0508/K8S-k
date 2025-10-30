@@ -2,13 +2,14 @@
 apiVersion: v1
 kind: Pod 
 metadata: 
-  name: svc-pod
-  labels: 
-    app: test-2
+  name: myown-pod
+  labels:
+    app: dummypod
 spec:
-  containers:
-    - name: test-2
-      image: kalyan0508/kalyan-repo:javaimage 
-      ports:
-        - containerPort: 8080
+  containers: 
+    - name: mydummy-container
+      image: nginx:1.29
+      ports: 
+        - containerPort: 80
           protocol: TCP
+          
